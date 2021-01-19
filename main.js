@@ -51,5 +51,5 @@ console.log(result);
 3. присваиваем NaN в переменную result
 4. с помощью console.log выводим в консоль
 */
-10 / +"2,5";
+result = 10 / +"2,5";
 console.log(result);
