@@ -1,55 +1,63 @@
-'use strict'
-// Задание  1 (конвертер температуры цельсий-фаренгейт)
-let temperCelc = +prompt("Введите температура по Цельсию");
-let temperFahren = ((9 / 5) * temperCelc) + 32;
-alert("Температура по Фарегейту будет " + temperFahren);
-// Задание 2
-let admin;
-let name = "Василий";
-admin = name;
-console.log(admin);
-// Задание 3 Объяснить почему ?
-/*
-1. к числу 10 прибавляем число 10 получаем 20
-2. число 20 конкатенирует со строкой 10 и получаем "2010"
-3. присваиваем строку "2010" в переменную result
-4. с помощью console.log выводим в консоль 
-*/
-let result = 10 + 10 + "10";
-console.log(result);
-/*
-1. число 10 конкатенирует со строкой 10 получаем строку "1010"
-2. строка "1010" конкатенирует с числом 10 получаем  строку "101010"
-3. присваиваем строку "101010" в переменную result
-4. с помощью console.log выводим в консоль
-*/
-result = 10 + "10" + 10;
-console.log(result);
+//Задание № 1 Вывести числа от 1 до 10
 
-/*
-1. к числу 10 прибавляем число 10 получаем 20
-2. с помощью знака "+" меняем тип данных у строки "10" и получаем число 10
-3. к числу 20 прибавляем число 10 получаем 30
-4. присваиваем число 30 в переменную result
-5. с помощью console.log выводим в консоль
-*/
-result = 10 + 10 + +"10";
-console.log(result);
+for (let a = 0; a <= 10; a++) {
+    if (a == 0) {
+        document.write(a + " - это ноль  <br/>")
+    } else if (a % 2 == 0) {
+        document.write(a + " - это четное число <br/>");
+    } else {
+        document.write(a + " - это нечетное число <br/>");
+    }
+}
+// Задание № 2 Вывести в консоль значения
 
+const post = {
+    author: "John", //вывести этот текст
+    postId: 23,
+    comments: [{
+            userId: 10,
+            userName: "Alex",
+            text: "lorem ipsum",
+            rating: {
+                likes: 10,
+                dislikes: 2 //вывести это число
+            }
+        },
+        {
+            userId: 5, //вывести это число
+            userName: "Jane",
+            text: "lorem ipsum 2", //вывести этот текст
+            rating: {
+                likes: 3,
+                dislikes: 1
+            }
+        },
+    ]
+};
 
-/*
-1. пустая строка  -"" преврашается в -0
-2. при делении числа 10 на  число -0 получаем - бесконечность
-3. присваиваем - бесконечность в переменную result
-4. с помощью console.log выводим в консоль
-*/
-result = 10 / -"";
-console.log(result);
-/*
-1. строка +"2,5" преврашается в NaN т.к. для дробных значение должна ставится знак точки вместо запятой
-2. при делении числа 10 на NaN получаем NaN
-3. присваиваем NaN в переменную result
-4. с помощью console.log выводим в консоль
-*/
-result = 10 / +"2,5";
-console.log(result);
+console.log(post.author);
+console.log(post.comments[0].rating.dislikes);
+console.log(post.comments[1].userId);
+console.log(post.comments[1].text);
+
+// Задание № 3 
+
+const products = [{
+        id: 3,
+        price: 200,
+    },
+    {
+        id: 4,
+        price: 900,
+    },
+    {
+        id: 1,
+        price: 1000,
+    },
+];
+products.forEach(item => {
+    item.price = item.price - item.price * 0.15;
+});
+console.log(products);
+
+// Задание № 4  не успел сделать
